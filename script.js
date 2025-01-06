@@ -64,6 +64,7 @@ function validateAndCalculate(){
 function handleButtonActivation(button) {
     tipButtons.forEach(b => b.classList.remove("active"));
     button.classList.add("active");
+    customInput.value = "";
     percentage = parseFloat(button.value);
     validateAndCalculate();
 }
@@ -93,11 +94,13 @@ resetBtn.addEventListener("click", function(){
 });
 
 document.addEventListener("click", function (event) {
-    if (![...tipButtons].includes(event.target)) {
+    if (![...tipButtons].includes(event.target) && event.target !== customInput && event.target !== bill && event.target !== peopleInput ) {
+        if (customInput.value === "") {
         tipButtons.forEach(b => b.classList.remove("active"));
         percentage = "";
 
         tipResult.textContent = "$0.00";
         totalResult.textContent = "$0.00";
     }
+}
 });

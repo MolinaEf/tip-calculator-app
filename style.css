@@ -48,6 +48,8 @@ body{
     border-radius: 1rem;
     padding: 1.5rem;
     width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .results{
@@ -197,4 +199,36 @@ button:active{
 .input.error:focus {
     border: 0.15rem solid var(--error-red) !important;
     outline: none; 
+}
+
+@media screen and (min-width: 48rem){
+    body{
+        justify-content: center;
+    }
+
+    .container2{
+        display: grid;
+        grid-template-columns: 5fr 4fr;
+        gap: 2rem;
+        max-width: 57rem;
+        width: 90%;
+        padding: 2rem;
+
+    }
+    .percentage-wrapper{
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .results-wrapper{
+        height: 100%;
+        grid-template-rows: 1fr 1fr 3fr;
+    }
+    .reset-btn{
+        align-self: end
+    }
+
+    .number-result{
+        font-size: 2.35rem;
+    }
 }
