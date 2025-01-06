@@ -2,43 +2,52 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
   <title>Frontend Mentor | Tip calculator app</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
-
-  Bill
-
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
-
-  Number of People
-
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+   <div class="container1">
+    <img src="images\logo.svg" alt="splitter logo" class="splitter-logo">   
+       <div class="container2">
+         <section class="bill-section">
+           <h2 class="bill">Bill</h2>
+           <input type="number" class="input-bill" placeholder="0">
+         </section>
+         <section class="select-tip-section">
+           <h2 class="select-tip-percentage">Select Tip %</h2>
+           <div class="percentage-wrapper">
+             <button class="tip-percentage">5%</button>
+             <button class="tip-percentage">10%</button>
+             <button class="tip-percentage">15%</button>
+             <button class="tip-percentage">25%</button>
+             <button class="tip-percentage">50%</button>
+             <input type="number" class="custom-tip" placeholder="Custom" min="0" max="99">
+           </div>
+         </section>
+         <section class="number-of-people-section">
+           <h2 class="number-of-people">Number of People</h2>
+           <input type="number" class="people-number" placeholder="0" min="1">
+         </section>
+         <div class="results">
+           <div class="results-wrapper">
+             <div class="box1">
+               <h3 class="tip-amount">Tip Amount</h3>
+               <h4 class="per-person">/ person</h4>
+             </div>
+             <div class="tip-result"></div>
+             <div class="box3">
+               <h3 class="total-amount">Total</h3>
+               <h4 class="per-person">/ person</h4>
+             </div>
+              <div class="total-result"></div>
+             <button class="reset-btn">RESET</button>
+           </div>
+         </div>
+       </div>
+   </div>
 </body>
 </html>

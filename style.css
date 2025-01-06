@@ -1,0 +1,140 @@
+:root{
+    --primary-color: hsl(172, 67%, 45%);
+    --very-dark-cyan: hsl(183, 100%, 15%);
+    --dark-grayish-cyan:  hsl(186, 14%, 43%);
+    --grayish-cyan: hsl(184, 14%, 56%);
+    --light-grayish-cyan: hsl(185, 41%, 84%);
+    --very-light-grayish-cyan: hsl(189, 41%, 97%);
+    --white: hsl(0, 0%, 100%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    background-color: var(--light-grayish-cyan);
+    font-family: 'Space Mono', 'sans-serif';
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.container1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.splitter-logo{
+    padding: 2.5rem;
+}
+
+.container2{
+    background-color: var(--white);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    width: 100%;
+}
+
+.results{
+    background-color: var(--very-dark-cyan);
+    border-radius: 1rem;
+}
+
+h2{
+    font-size: 0.95rem;
+    color: var(--dark-grayish-cyan);
+    letter-spacing: 0.02rem;
+    margin-bottom: 0.8rem;
+    line-height: 0.9;
+}
+
+input{
+    background-color: var(--very-light-grayish-cyan);
+    width: 100%;
+    border-radius: 0.3rem;
+    padding-right: 1rem;
+    text-align: right;
+    color: var(--very-dark-cyan);
+}
+
+.input-bill{
+    background-image: url("images/icon-dollar.svg");
+}
+
+input, .tip-percentage, .reset-btn{
+    font-family: 'Space Mono', 'sans-serif';
+    font-size: 1.5rem;
+    font-weight: 700;
+    border: none;
+    height: 2.87rem;
+}
+
+section{
+    margin-bottom: 1.5rem;
+}
+
+.percentage-wrapper{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    padding: 0.5rem 0;
+}
+
+.tip-percentage{
+    border-radius: 0.3rem;
+    background-color: var(--very-dark-cyan);
+    color: var(--white);
+    padding: 0.3rem 0;
+}
+
+.people-number{
+    background-image: url("images/icon-person.svg");
+}
+    
+.people-number, .input-bill{
+    background-repeat: no-repeat;
+    background-position: 1.2rem 0.9rem;
+}
+
+.results{
+    padding: 2.8rem 1.5rem 1.5rem 1.5rem;
+}
+
+.results-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    grid-template-rows: 1.3fr 1.3fr 1fr;
+}
+
+h3{
+    color: var(--white);
+    font-size: 1rem;
+}
+
+h4{
+    color: var(--dark-grayish-cyan);
+    font-size: 0.9rem;
+}
+
+.reset-btn{
+    grid-area: 3 / 1 / 4 / 3;
+    background-color: var(--primary-color);
+    color: var(--very-dark-cyan);
+    font-size: 1.15rem;
+    border-radius: 0.3rem;
+}
