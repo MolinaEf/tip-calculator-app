@@ -69,28 +69,43 @@ function handleButtonActivation(button) {
     validateAndCalculate();
 }
 
+function checkFields(){
+    // Check if any field (bill, peopleInput, customInput, or percentage) is filled or has a valid value
+    if ((bill.value || peopleInput.value || customInput.value || percentage !== "") && 
+        !(bill.value === "" && peopleInput.value === "" && customInput.value === "")) {
+        resetBtn.disabled = false;  // Enable reset button
+    } else {
+        resetBtn.disabled = true;   // Disable reset button
+    }
+}
 
 tipButtons.forEach (button => {
     button.addEventListener("click", function(){
         handleButtonActivation(button)
+        checkFields();
     });
 })
 
 customInput.addEventListener("input", function(){
     percentage = +customInput.value / 100;
+    checkFields();
     validateAndCalculate();
 });
 
 bill.addEventListener("input", function(){
+    checkFields();
     validateAndCalculate();
 });
 
 peopleInput.addEventListener("input", function(){
+    checkFields();
     validateAndCalculate();
 });
 
 resetBtn.addEventListener("click", function(){
     resetInputs();
+    resetBtn.disabled = true;
+    console.log("resetBtn clicked");
 });
 
 document.addEventListener("click", function (event) {
@@ -104,3 +119,5 @@ document.addEventListener("click", function (event) {
     }
 }
 });
+
+resetBtn.disabled = true;

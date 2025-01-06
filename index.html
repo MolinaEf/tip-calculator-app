@@ -14,46 +14,48 @@
    <div class="container1">
     <img src="images\logo.svg" alt="splitter logo" class="splitter-logo">   
        <div class="container2">
-         <div class="calculations">
-           <section class="bill-section">
-             <div class="top-text">
-                <span class="bill h2">Bill</span>
-                <span class="error-text hide" id="error1">Can't be zero</span>
-              </div>
-             <input id="bill" data-error="error1" type="number" class="input-bill input" placeholder="0">
-           </section>
-           <section class="select-tip-section">
-             <h2 class="select-tip-percentage h2">Select Tip %</h2>
-             <div class="percentage-wrapper">
-               <button value="0.05" class="tip-percentage">5%</button>
-               <button value="0.1" class="tip-percentage">10%</button>
-               <button value="0.15" class="tip-percentage">15%</button>
-               <button value="0.25" class="tip-percentage">25%</button>
-               <button value="0.5" class="tip-percentage">50%</button>
-               <input id="custom-tip" type="number" class="custom-tip" placeholder="Custom" min="0" max="99">
+         <div class="full-wrapper">
+           <div class="calculations">
+             <section class="bill-section">
+               <div class="top-text">
+                  <span class="bill h2">Bill</span>
+                  <span class="error-text hide" id="error1">Can't be zero</span>
+                </div>
+               <input id="bill" data-error="error1" type="number" class="input-bill input" placeholder="0">
+             </section>
+             <section class="select-tip-section">
+               <h2 class="select-tip-percentage h2">Select Tip %</h2>
+               <div class="percentage-wrapper">
+                 <button value="0.05" class="tip-percentage">5%</button>
+                 <button value="0.1" class="tip-percentage">10%</button>
+                 <button value="0.15" class="tip-percentage">15%</button>
+                 <button value="0.25" class="tip-percentage">25%</button>
+                 <button value="0.5" class="tip-percentage">50%</button>
+                 <input id="custom-tip" type="number" class="custom-tip" placeholder="Custom" min="0" max="99">
+               </div>
+             </section>
+             <section class="number-of-people-section">
+               <div class="top-text">
+                  <span class="number-of-people h2">Number of People</span>
+                  <span id="error2" class="error-text hide">Can't be zero</span>
+                </div>
+               <input id="people-input" step="1" data-error="error2" type="number" class="people-number input" placeholder="0" min="1">
+             </section>
+           </div>
+           <div class="results">
+             <div class="results-wrapper">
+               <div class="box1">
+                 <h3 class="tip-amount">Tip Amount</h3>
+                 <h4 class="per-person">/ person</h4>
+               </div>
+               <div class="tip-result number-result">$0.00</div>
+               <div class="box3">
+                 <h3 class="total-amount">Total</h3>
+                 <h4 class="per-person">/ person</h4>
+               </div>
+                <div class="total-result number-result">$0.00</div>
+               <button class="reset-btn" id="reset-btn">RESET</button>
              </div>
-           </section>
-           <section class="number-of-people-section">
-             <div class="top-text">
-                <span class="number-of-people h2">Number of People</span>
-                <span id="error2" class="error-text hide">Can't be zero</span>
-              </div>
-             <input id="people-input" step="1" data-error="error2" type="number" class="people-number input" placeholder="0" min="1">
-           </section>
-         </div>
-         <div class="results">
-           <div class="results-wrapper">
-             <div class="box1">
-               <h3 class="tip-amount">Tip Amount</h3>
-               <h4 class="per-person">/ person</h4>
-             </div>
-             <div class="tip-result number-result">$0.00</div>
-             <div class="box3">
-               <h3 class="total-amount">Total</h3>
-               <h4 class="per-person">/ person</h4>
-             </div>
-              <div class="total-result number-result">$0.00</div>
-             <button class="reset-btn" id="reset-btn">RESET</button>
            </div>
          </div>
        </div>

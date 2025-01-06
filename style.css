@@ -201,9 +201,18 @@ button:active{
     outline: none; 
 }
 
+button:disabled{
+    cursor: not-allowed;  /* Change cursor to indicate it's not clickable */
+    opacity: 0.5;
+}
+
 @media screen and (min-width: 48rem){
     body{
         justify-content: center;
+    }
+
+    .container1{
+        height: 80%;
     }
 
     .container2{
