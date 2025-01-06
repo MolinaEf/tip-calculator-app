@@ -207,13 +207,16 @@ button:active{
     }
 
     .container2{
+        max-width: 57rem;
+        width: 90%;
+    }
+
+    .full-wrapper{
         display: grid;
         grid-template-columns: 5fr 4fr;
         gap: 2rem;
-        max-width: 57rem;
-        width: 90%;
-        padding: 2rem;
-
+        width: 100%;
+        height: 100%;
     }
     .percentage-wrapper{
         grid-template-columns: 1fr 1fr 1fr;
@@ -222,7 +225,11 @@ button:active{
 
     .results-wrapper{
         height: 100%;
-        grid-template-rows: 1fr 1fr 3fr;
+        grid-template-rows: 1fr 1fr 2.5fr;
+    }
+
+    .results{
+        height: 100%;
     }
     .reset-btn{
         align-self: end
