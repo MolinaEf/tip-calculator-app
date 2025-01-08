@@ -207,6 +207,11 @@ button:disabled{
 }
 
 @media screen and (min-width: 48rem){
+
+    html{
+        font-size: 90%
+    }
+
     body{
         justify-content: center;
     }

@@ -87,10 +87,21 @@ tipButtons.forEach (button => {
 })
 
 customInput.addEventListener("input", function(){
+    tipButtons.forEach(b => b.classList.remove("active"));
     percentage = +customInput.value / 100;
     checkFields();
     validateAndCalculate();
 });
+
+customInput.addEventListener("click", function(event){
+    tipButtons.forEach(b => b.classList.remove("active"));
+    if (event.target.value === "") {
+        percentage = "";
+
+        tipResult.textContent = "$0.00";
+        totalResult.textContent = "$0.00";
+}
+})
 
 bill.addEventListener("input", function(){
     checkFields();
